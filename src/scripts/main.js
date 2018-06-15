@@ -11,7 +11,7 @@ const DragDropManager = Object.create(null, {
             })
 
 
-            const targets = document.querySelectorAll(".target")
+            const targets = document.querySelectorAll(".target, .origin")
 
             targets.forEach(target => {
                 // Dragover not supported by default. Turn that off.
@@ -26,12 +26,11 @@ const DragDropManager = Object.create(null, {
 
                     // Append card to target component as child
 
-                    if (!e.target.childNodes[0] && !e.target.classList.contains("stage")) {
+                    if (!e.target.childNodes[0] && !e.target.classList.contains("stage") || e.target.classList.contains("origin") && !e.target.classList.contains("stage")) {
                         e.target.appendChild(document.querySelector(`.${data.split(" ")[1]}`))
                     }
                     // TODO: This should only happen if the target has no children nodes
                     // TODO: This should not happen if the target is another stage card
-                    
                 }
             })
         }
