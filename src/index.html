@@ -1,32 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Nashville Software School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-
 <body>
+    <header class="target currentStage"></header>
 
-  <article id="powerList">
-    <section id="flight" class="power disabled">
-        Flight
-    </section>
-    <section id="mindreading" class="power disabled">
-        Mind Reading
-    </section>
-    <section id="xray" class="power disabled">
-        X-ray Vision
-    </section>
-  </article>
-
-  <button id="activate-flight">Activate Flight</button>
-  <button id="activate-mindreading">Activate Mind Reading</button>
-  <button id="activate-xray">Active X-ray Vision</button>
-
-  <button id="activate-all">Active All Powers</button>
-  <button id="deactivate-all">Deactive All Powers</button>
-
-
-  <script src="./bundle.js"></script>
+    <article class="grid origin">
+      <section class="stage stage--design" draggable="true">Design</section>
+      <section class="stage stage--develop" draggable="true">Develop</section>
+      <section class="stage stage--test" draggable="true">Test</section>
+      <section class="stage stage--release" draggable="true">Release</section>
+    </article>
+    
+    <footer class="target finishedStage"></footer>
+    <script src="./bundle.js"></script>
 </body>
 </html>
